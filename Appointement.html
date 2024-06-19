@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <style>
+        /* General slide styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #434343);
+            color: #FFD700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px;
+            overflow-y: auto; /* Enable vertical scrolling */
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .contact-form, .contact-list {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            margin: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Contact form styles */
+        .contact-form .title h2,
+        .contact-form .title h3 {
+            color: #FFD700;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #FFD700;
+            border-radius: 4px;
+            background-color: #333333;
+            color: #FFD700;
+            box-sizing: border-box;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #FFD700;
+        }
+
+        .contact-form .submit-btn button {
+            background-color: #FFD700;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form .submit-btn button:hover {
+            background-color: #e6be00;
+        }
+
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #FFD700;
+            color: #000000;
+            text-align: center;
+            border-radius: 4px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+
+        #toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from { bottom: 0; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
+        }
+
+        @keyframes fadein {
+            from { bottom: 0; opacity: 0; }
+            to { bottom: 30px; opacity: 1; }
+        }
+
+        @-webkit-keyframes fadeout {
+            from { bottom: 30px; opacity: 1; }
+            to { bottom: 0; opacity: 0; }
+        }
+
+        @keyframes fadeout {
+            from { bottom: 30px; opacity: 1; }
+            to { bottom: 0; opacity: 0; }
+        }
+
+        /* Contact list styles */
+        .contact-list {
+            text-align: center;
+        }
+
+        .contact-list h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .contact-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-list li {
+            margin: 15px 0;
+        }
+
+        .contact-list a {
+            text-decoration: none;
+            color: #FFD700;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .contact-list a:hover {
+            color: #FFFFFF;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                overflow-y: auto; /* Enable vertical scrolling for smaller screens */
+            }
+
+            .contact-form, .contact-list {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .contact-list h1 {
+                font-size: 2em;
+            }
+
+            .contact-list a {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-form" id="contact">
+            <div class="title">
+                <h2>Book an Appointment</h2>
+                <h3>Fill the Details</h3>
+            </div>
+            <div class="wpcf7" lang="en-US" dir="ltr">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="wpcf7-form-control-wrap full-name">
+                                <input type="text" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" id="name" name="name" placeholder="Your Name*">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="wpcf7-form-control-wrap your-phone">
+                                <input type="tel" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" id="phone" name="phone" placeholder="Your Phone Number*">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <span class="wpcf7-form-control-wrap your-message">
+                                <textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" id="message" name="message" placeholder="Your Message"></textarea>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="submit-btn">
+                                <button type="button" id="sendButton" class="sec-btn sm-btn">Send Message</button>
+                                <div id="toast">Message sent successfully!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpcf7-response-output wpcf7-display-none"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-list">
+            <h1>Contact Links</h1>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/artist.puja30990?mibextid=ZbWKwL" target="_blank">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/pujaz_makeupstudio_academy?igsh=ZThyejV6aHlwcHo3" target="_blank">Instagram</a>
+                </li>
+                <li>
+                    <a href="https://wa.me/919563823352" target="_blank">WhatsApp: +91 95638 23352</a>
+                </li>
+                <li>
+                    <a href="https://wa.me/7864887262" target="_blank">WhatsApp: +91 78648 87262</a>
+                </li>
+                <li>
+                    <a href="mailto:Pujathakur558@gmail.com">Email: pujathakur558@gmail.com</a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/place/23%C2%B040'51.2%22N+86%C2%B059'24.3%22E/@23.6808877,86.9874956,17z/data=!3m1!4b1!4m4!3m3!8m2!3d23.6808877!4d86.9900705?entry=ttu" target="_blank">Location on Google Maps</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function () {
+            var name = document.getElementById('name').value;
+            var phone = document.getElementById('phone').value;
+            var message = document.getElementById('message').value;
+            var chatId = '6229035167';
+            var botToken = '6905045748:AAE8igCLw3xiFev0knjrHC_6HUDFmu3UUkc';
+            var text = `Name: ${name}\nPhone: ${phone}\nMessage: ${message}`;
+            var url = `https://api.telegram.org/bot${botToken}/sendMessage?text=${encodeURIComponent(text)}&chat_id=${chatId}`;
+
+            fetch(url)
+                .then(response => {
+                    if (response.ok) {
+                        // Show the toast notification
+                        var toast = document.getElementById('toast');
+                        toast.className = 'show';
+                        setTimeout(function () {
+                            toast.className = toast.className.replace('show', '');
+                        }, 3000);
+
+                        // Clear the input fields
+                        document.getElementById('name').value = '';
+                        document.getElementById('phone').value = '';
+                        document.getElementById('message').value = '';
+                    } else {
+                        alert('There was a problem sending the message.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was a problem sending the message.');
+                });
+        });
+    </script>
+</body>
+</html>

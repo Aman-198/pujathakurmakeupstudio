@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Makeup & Hair Style Course</title>
+    <link rel="shortcut icon" href="assets/images/icons/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/jquery.fancybox.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: url('1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .container-custom {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            max-width: 375px;
+            margin: 60px auto;
+            border-radius: 10px;
+            border: 2px solid #ffd700;
+            animation: zoomIn 2s;
+            transition: transform 0.5s;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 0;
+            animation: slideIn 1s ease-out;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ffd700; /* Changed from white to #ffd700 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        p, ul, li {
+            color: #fff;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        li:hover {
+            background: rgba(255, 215, 0, 0.3);
+            transform: scale(1.05);
+        }
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        .contact a:hover {
+            color: #fff;
+        }
+        .offer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ff4500;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .hidden {
+            display: none;
+            opacity: 0;
+        }
+        .visible {
+            display: block;
+            animation: fadeIn 1s forwards, zoomIn 1s forwards;
+        }
+        .zoom {
+            transform: scale(1.2);
+        }
+        @media (max-width: 900px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .container-custom {
+                padding: 15px;
+                margin: 20px;
+            }
+            li {
+                padding: 8px;
+            }
+        }
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            .container-custom {
+                padding: 10px;
+                margin: 10px;
+            }
+            li {
+                padding: 8px;
+            }
+        }
+        .about-image {
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="about-us" id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div class="about-content wow fadeInLeftBig">
+                        <h2 class="h2-title" data-wow-duration="1000ms">Details</h3>
+                        <h3 class="h3-title">Course Details</h3>
+                        <div class="overflow-text">
+                            <p>𝙊𝙪𝙧 14 𝙙𝙖𝙮𝙨 𝙖𝙙𝙫𝙖𝙣𝙘𝙚 𝙙𝙞𝙥𝙡𝙤𝙢𝙖 𝙢𝙖𝙨𝙩𝙚𝙧 𝙘𝙡𝙖𝙨𝙨 𝙛𝙚𝙚𝙨 𝙤𝙣𝙡𝙮 15000, 3000 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙩𝙞𝙤𝙣 𝙘𝙝𝙖𝙧𝙜𝙚 𝙝𝙖𝙫𝙚 𝙩𝙤 𝙥𝙖𝙮 𝙛𝙞𝙧𝙨𝙩 𝙛𝙤𝙧 𝙨𝙚𝙖𝙩 𝙗𝙤𝙤𝙠𝙞𝙣𝙜. 𝘿𝙪𝙚 12000 𝙖𝙢𝙤𝙪𝙣𝙩 𝙤𝙣 𝙩𝙝𝙚 𝙛𝙞𝙧𝙨𝙩 𝙙𝙖𝙮 𝙤𝙛 𝙩𝙝𝙚 𝙘𝙡𝙖𝙨𝙨. 𝙁𝙤𝙧 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙩𝙞𝙤𝙣 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙙 𝙣𝙖𝙢𝙚, 
+                                𝘼𝙙𝙙𝙧𝙚𝙨𝙨, 𝘼𝙙𝙝𝙖𝙧𝙙 𝙘𝙖𝙧𝙙. 3000/- 𝙜𝙤𝙤𝙜𝙡𝙚 𝙥𝙖𝙮 𝙤𝙧 𝙥𝙝𝙤𝙣𝙚 𝙥𝙖𝙮.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <div class="about-frame wow fadeInRightBig">
+                        <div class="about-image" style="background-image: url(./assets/images/about1.jpg);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-custom" id="mainContainer">
+        <h1>14 Days Advanced Makeup & Hair Style</h1>
+        <h2>Asansol</h2>
+        <p><strong>Address:</strong> Rambandhu Talaw (Asansol)</p>
+        <p><strong>Details of Course:</strong></p>
+        <ul id="courseDetails">
+            <li>Products knowledge (International products)</li>
+            <li>Brush knowledge</li>
+            <li>Highlighting & Contouring Technique</li>
+            <li>Party Makeup/Engagement Makeup</li>
+            <li>HD Traditional Bridal Makeup</li>
+            <li>Non HD Bridal Makeup</li>
+            <li>HD Bridal Reception Makeup</li>
+            <li>HD Non-Bengali Bridal Makeup</li>
+            <li>Airbrush Makeup</li>
+            <li>Water Resistant Makeup</li>
+            <li>Brazilian Makeup Technique</li>
+            <li>Different types of hairstyles</li>
+            <li>Different types of eye makeup (Cut crease/Double cut crease/Smokey/Glam/Glitter eye/Hooded eye Makeup)</li>
+            <li>Saree draping and Kolka (basic to advanced)</li>
+            <li>Students Hands-On Practice</li>
+            <li>Students Exam</li>
+            <li>Certificate Distribution & Celebration</li>
+        </ul>
+        <p><strong>Details of Hair Style Course:</strong></p>
+        <ul id="hairStyleCourseDetails">
+            <li>5 Days Hair Style Course</li>
+            <li>Course Fee: 7000 Rupees</li>
+        </ul>
+        <div class="contact">
+            <p><strong>For admission call on</strong></p>
+            <p><a href="tel:+919563823352">📞 9563823352 📞</a></p>
+        </div>
+        <div class="offer">
+            <p>AND GET OFFER OF</p>
+            <p><strong>FREE ADVANCE HAIRSTYLE COURSE</strong></p>
+            <p>WITH THIS MASTER CLASS</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const courseDetails = document.getElementById('courseDetails');
+            const hairStyleCourseDetails = document.getElementById('hairStyleCourseDetails');
+            const details = courseDetails.querySelectorAll('li');
+            const hairStyleDetails = hairStyleCourseDetails.querySelectorAll('li');
+            const mainContainer = document.getElementById('mainContainer');
+            
+            details.forEach((detail, index) => {
+                setTimeout(() => {
+                    detail.classList.add('visible');
+                }, index * 200);
+            });
+
+            hairStyleDetails.forEach((detail, index) => {
+                setTimeout(() => {
+                    detail.classList.add('visible');
+                }, (details.length + index) * 200);
+            });
+
+            mainContainer.addEventListener('click', function() {
+                mainContainer.classList.toggle('zoom');
+            });
+        });
+    </script>
+</body>
+</html>
