@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #434343);
+            color: #FFD700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .container {
+            padding: 20px;
+        }
+        .gallery-img {
+            position: relative;
+            overflow: hidden;
+            border: 5px solid #FFD700; /* Golden border */
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Golden shadow */
+            margin-bottom: 15px;
+        }
+        .gallery-img .img {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%; /* 1:1 aspect ratio */
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-img a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        @media (min-width: 992px) {
+            .gallery-img {
+                height: 300px; /* Set a fixed height for larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/about.JPG');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img2.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/DI.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img3.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img3.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img4.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img4.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img5.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img3.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img6.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img4.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img7.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img8.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img3.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img9.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img4.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img10.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img11.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img3.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img12.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img4.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img13.PNG');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img14.PNG');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img15.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img.jpg');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="gallery-img wow zoomIn">
+                    <a href="assets/images/gallery-img2.jpg" data-fancybox="gallery">
+                        <div class="img" style="background-image: url('assets/images/gallery-img2.jpg');"></div>
+                    </a>
+                </div>
+        </div>
+    </div>
+
+    <!-- Fancybox and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-fancybox="gallery"]').fancybox({
+                buttons: [
+                    'zoom',
+                    'slideShow',
+                    'fullScreen',
+                    'download',
+                    'thumbs',
+                    'close'
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
