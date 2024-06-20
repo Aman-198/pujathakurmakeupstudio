@@ -14,21 +14,19 @@
             overflow-x: hidden;
         }
         .container-custom {
-    width: 100%; /* added */
-    background: rgba(0, 0, 0, 0.85);
-    padding: 30px;
-    max-width: 80%;
-    margin: 60px auto;
-    border-radius: 10px;
-    border: 2px solid #ffd700;
-    animation: zoomIn 2s;
-    transition: transform 0.5s;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 30px;
+            max-width: 80%;
+            margin: 60px auto;
+            border-radius: 10px;
+            border: 2px solid #ffd700;
+            transition: transform 0.5s;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
         h1, h2 {
             text-align: center;
             margin: 0;
-            animation: slideIn 1s ease-out;
             font-family: Arial, Helvetica, sans-serif;
         }
         h1 {
@@ -54,12 +52,11 @@
             padding: 10px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
-            transition: background 0.3s, transform 0.3s;
+            transition: background 0.3s;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         li:hover {
             background: rgba(255, 215, 0, 0.3);
-            transform: scale(1.05);
         }
         .contact {
             text-align: center;
@@ -89,51 +86,27 @@
             from { transform: translateY(-50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-        @keyframes zoomIn {
-            from { transform: scale(0.5); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
         .hidden {
             display: none;
             opacity: 0;
         }
         .visible {
             display: block;
-            animation: fadeIn 1s forwards, zoomIn 1s forwards;
-        }
-        .zoom {
-            transform: scale(1.2);
+            animation: fadeIn 1s forwards;
         }
         @media (max-width: 900px) {
-    .container-custom {
-        max-width: 60%; /* decrease the maximum width for mobile and desktop views when the width is decreased */
-        margin: 30px auto;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 700px) {
-    .container-custom {
-        max-width: 90%; /* adjust the maximum width for even smaller screens */
-        margin: 20px auto;
-        padding: 10px;
-    }
-}
-    .container-custom {
-        max-width: 60
             .container-custom {
-                padding: 10px;
-                margin: 10px;
-            }
-            li {
-                padding: 8px;
+                max-width: 60%;
+                margin: 30px auto;
+                padding: 15px;
             }
         }
-        .about-image {
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            width: 100%;
+        @media (max-width: 700px) {
+            .container-custom {
+                max-width: 90%;
+                margin: 20px auto;
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -143,9 +116,9 @@
         <h2>Asansol</h2>
         <p><strong>Course Fee:</strong> 15000 Rupees</p>
         <ul id="hairStyleCourseDetails">
-            <li> 3000 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙩𝙞𝙤𝙣 𝙘𝙝𝙖𝙧𝙜𝙚 𝙝𝙖𝙫𝙚 𝙩𝙤 𝙥𝙖𝙮 𝙛𝙞𝙧𝙨𝙩 𝙛𝙤𝙧 𝙨𝙚𝙖𝙩 𝙗𝙤𝙤𝙠𝙞𝙣𝙜</li>
+            <li>3000 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙩𝙞𝙤𝙣 𝙘𝙝𝙖𝙧𝙜𝙚 𝙝𝙖𝙫𝙚 𝙩𝙤 𝙥𝙖𝙮 𝙛𝙞𝙧𝙨𝙩 𝙛𝙤𝙧 𝙨𝙚𝙖𝙩 𝙗𝙤𝙤𝙠𝙞𝙣𝙜</li>
             <li>𝘿𝙪𝙚 12000 𝙖𝙢𝙤𝙪𝙣𝙩 𝙤𝙣 𝙩𝙝𝙚 𝙛𝙞𝙧𝙨𝙩 𝙙𝙖𝙮 𝙤𝙛 𝙩𝙝𝙚 𝙘𝙡𝙖𝙨𝙨</li>
-            <li> 𝙁𝙤𝙧 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙩𝙞𝙤𝙣 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙙 𝙣𝙖𝙢𝙚, 𝘼𝙙𝙙𝙧𝙚𝙨𝙨, 𝘼𝙙𝙝𝙖𝙧𝙙 𝙘𝙖𝙧𝙙.</li>
+            <li> 𝙁𝙤𝙧 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙩𝙞𝙤𝙣 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙙 𝙣𝙖𝙢𝙚, 𝘼d𝙙𝙧𝙚𝙨𝙨, 𝘼d𝙝𝙖𝙧𝙙 𝙘𝙖𝙧𝙙.</li>
             <li>3000 Rupees pay through 𝙜𝙤𝙤𝙜𝙡𝙚 𝙥𝙖𝙮 𝙤𝙧 𝙥𝙝𝙤𝙣𝙚 𝙥𝙖𝙮</li>
             <li> And gain your Certificate </li>
         </ul>
@@ -202,7 +175,7 @@
         <div class="contact">
             <p><strong>For admission call on</strong></p>
             <p><a href="tel:+919563823352">📞 9563823352 📞</a></p>
-        </div>
+       </div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -210,8 +183,6 @@
             const hairStyleCourseDetails = document.getElementById('hairStyleCourseDetails');
             const details = courseDetails.querySelectorAll('li');
             const hairStyleDetails = hairStyleCourseDetails.querySelectorAll('li');
-            const mainContainer = document.getElementById('mainContainer');
-            const hairStyleContainer = document.getElementById('hairStyleContainer');
 
             details.forEach((detail, index) => {
                 setTimeout(() => {
@@ -224,18 +195,7 @@
                     detail.classList.add('visible');
                 }, (details.length + index) * 200);
             });
-
-            mainContainer.addEventListener('click', function() {
-                mainContainer.classList.toggle('zoom');
-            });
-
-            hairStyleContainer.addEventListener('click', function() {
-                hairStyleContainer.classList.toggle('zoom');
-            });
         });
     </script>
 </body>
 </html>
-
-
-
