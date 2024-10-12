@@ -1,1 +1,1 @@
-# pujathakurmakeupstudio
+https://pujathakurmakeupstudio.netlify.app
